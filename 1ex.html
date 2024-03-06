@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+
+        .container {
+            display: grid;
+            /* grid-template-columns: auto auto auto; */ /* Quanto mais auto tiver, mais colunas eu terei. No caso há 3 colunas */
+
+            /* Posso declarar o tamanho dessas colunas também */
+
+            grid-template-columns: 150px 100px auto;
+
+
+
+            grid-template-rows: 150px 200px; /* Primeira linha tem 150px */
+            /* Segunda tem 200px */
+        }
+
+        div {
+            background-color: antiquewhite;
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.233);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>Caixa1</div>
+        <div>Caixa2</div>
+        <div>Caixe3</div>
+        <div>Caixa4</div>
+        <div>Caixa5</div>
+    </div>
+</body>
+</html>

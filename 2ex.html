@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout - Gap</title>
+    <style>
+
+        .container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto 50px;
+            /* grid-column-gap: 10px; */ /* Adiciona um espaçamento entre as colunas */
+
+            /* grid-row-gap: 10px; */ /* Adciona um espaçamento entre as linhas */
+
+            /* grid-gap: 10px; */ /* Adiciona um espaçamento entre linhas as linhas e as colunas */
+
+            grid-gap: 10px 20px; /* 1- linhas 2- colunas */ /* É possível aplicar esta propriedade nos elementos */
+        }
+
+        div {
+            background-color: antiquewhite;
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.233);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>Caixa1</div>
+        <div>Caixa2</div>
+        <div>Caixe3</div>
+        <div>Caixa4</div>
+        <div>Caixa5</div>
+        <div>Caixa6</div>
+    </div>
+</body>
+</html>
