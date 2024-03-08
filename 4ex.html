@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout - grid-area</title>
+    <style>
+
+        .container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto 50px;
+            grid-gap: 10px 20px;
+        }
+
+        div {
+            background-color: antiquewhite;
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.233);
+        }
+
+        .item1 {
+            /* grid-column-start: 1; */ /* coluna vai iniciar */
+            /* grid-column-end: 3; */ /* coluna que vai terminar */ /* Ele termina um espaço antes do numero declarado, ou seja n - 1 */
+        }
+
+        .item1shorthand {
+            /* O shorthand do grid-column-start/end é o grid-column */
+
+            /* grid-column: 1 / 3; */ /* Inicia no 1 e vai até 3 - 1 */
+        }
+
+        .item1row {
+            /* Da mesma forma o grid-row */
+            /* grid-row-start: 1; */
+            /* grid-row-end: 3; */ /* n - 1   - Segue o mesmo conteito do grid-column-end*/
+
+            /* Da mesma forma tem o shorthand */
+
+            /* grid-row: 1 / 3; */
+        }
+
+
+        .span {
+            /* Propriedade que diz quanto que vai expandir */
+            /* grid-column: 1 / span 3; */ /* O span não tem o n - 1, ele expande até o número declarado */
+        }
+
+        .area {
+            /* grid-row-start */
+            /* grid-column-start */
+            /* grid-row-end */
+            /* grid-column-end */
+
+            grid-area: 1 / 1 / 3 / 1 ;
+        }
+
+        .area1 {
+            grid-area: 1 / 3 / 3 / 4 ;
+        }
+
+        .area2 {
+            grid-area: 3 / 1 / 4 / 4 ;
+        }
+
+        .area3 {
+            grid-area: 4 / 2 / 4 / 2;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1shorthand item1row span area">Caixa1</div>
+        <div class="item area1">Caixa2</div>
+        <div class="item ">Caixe3</div>
+        <div class="item ">Caixa4</div>
+        <div class="item area2">Caixa5</div>
+        <div class="item area3">Caixa6</div>
+    </div>
+</body>
+</html>
